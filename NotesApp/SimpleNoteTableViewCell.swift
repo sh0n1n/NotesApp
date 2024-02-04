@@ -26,4 +26,9 @@ final class SimpleNoteTableViewCell: UITableViewCell {
         
         return label
     }()
+    
+    // MARK: - Private Methods
+    private func setupConstraints() {
+        
+    }
 }
