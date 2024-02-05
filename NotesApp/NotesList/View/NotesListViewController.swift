@@ -8,12 +8,16 @@
 import UIKit
 
 class NotesListViewController: UITableViewController {
+    // MARK: - Properties
+     var viewModel: NotesListViewModelProtocol?
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "NOTES"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
         setupTableView()
         
     }
@@ -22,6 +26,7 @@ class NotesListViewController: UITableViewController {
     private func setupTableView() {
         tableView.register(SimpleNoteTableViewCell.self, forCellReuseIdentifier: "SimpleNoteTableViewCell")
         tableView.register(ImageNoteTableViewCell.self, forCellReuseIdentifier: "ImageNoteTableViewCell")
+        tableView.separatorStyle = .none
     }
 }
 

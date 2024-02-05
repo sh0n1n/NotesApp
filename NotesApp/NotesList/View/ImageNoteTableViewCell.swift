@@ -23,6 +23,8 @@ final class ImageNoteTableViewCell: UITableViewCell {
         
         view.layer.cornerRadius = 15
         view.image = UIImage(named: "image")
+        view.layer.masksToBounds = true
+        view.contentMode = .scaleAspectFill
         
         return view
     }()

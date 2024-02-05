@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if let window = window {
             let navigationController = UINavigationController()
+            let viewController = NotesListViewController()
+            viewController.viewModel = NotesListViewModel()
             navigationController.viewControllers = [NotesListViewController()]
             window.rootViewController = navigationController
             window.makeKeyAndVisible()

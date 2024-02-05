@@ -15,6 +15,9 @@
 		8DA22BC82B702AEB00B1B72E /* ImageNoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA22BC72B702AEB00B1B72E /* ImageNoteTableViewCell.swift */; };
 		8DA22BCB2B70336900B1B72E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8DA22BCA2B70336900B1B72E /* SnapKit */; };
 		8DA22BCD2B70336900B1B72E /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 8DA22BCC2B70336900B1B72E /* SnapKit-Dynamic */; };
+		8DA22BD12B7074CE00B1B72E /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA22BD02B7074CE00B1B72E /* Note.swift */; };
+		8DA22BD52B70758400B1B72E /* NotesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA22BD42B70758400B1B72E /* NotesListViewModel.swift */; };
+		8DA22BD72B707E4100B1B72E /* TableViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA22BD62B707E4100B1B72E /* TableViewSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		8DA22BBF2B7024A600B1B72E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DA22BC52B702ADB00B1B72E /* SimpleNoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNoteTableViewCell.swift; sourceTree = "<group>"; };
 		8DA22BC72B702AEB00B1B72E /* ImageNoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNoteTableViewCell.swift; sourceTree = "<group>"; };
+		8DA22BD02B7074CE00B1B72E /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		8DA22BD42B70758400B1B72E /* NotesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListViewModel.swift; sourceTree = "<group>"; };
+		8DA22BD62B707E4100B1B72E /* TableViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,14 +67,49 @@
 			isa = PBXGroup;
 			children = (
 				8DA22BB12B7024A500B1B72E /* AppDelegate.swift */,
-				8DA22BB52B7024A500B1B72E /* NotesListViewController.swift */,
-				8DA22BC52B702ADB00B1B72E /* SimpleNoteTableViewCell.swift */,
-				8DA22BC72B702AEB00B1B72E /* ImageNoteTableViewCell.swift */,
+				8DA22BD62B707E4100B1B72E /* TableViewSection.swift */,
+				8DA22BD32B70753C00B1B72E /* NotesList */,
 				8DA22BBA2B7024A600B1B72E /* Assets.xcassets */,
 				8DA22BBC2B7024A600B1B72E /* LaunchScreen.storyboard */,
 				8DA22BBF2B7024A600B1B72E /* Info.plist */,
 			);
 			path = NotesApp;
+			sourceTree = "<group>";
+		};
+		8DA22BCE2B70748800B1B72E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8DA22BB52B7024A500B1B72E /* NotesListViewController.swift */,
+				8DA22BC72B702AEB00B1B72E /* ImageNoteTableViewCell.swift */,
+				8DA22BC52B702ADB00B1B72E /* SimpleNoteTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8DA22BCF2B7074A300B1B72E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8DA22BD42B70758400B1B72E /* NotesListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8DA22BD22B70751D00B1B72E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8DA22BD02B7074CE00B1B72E /* Note.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8DA22BD32B70753C00B1B72E /* NotesList */ = {
+			isa = PBXGroup;
+			children = (
+				8DA22BD22B70751D00B1B72E /* Model */,
+				8DA22BCF2B7074A300B1B72E /* ViewModel */,
+				8DA22BCE2B70748800B1B72E /* View */,
+			);
+			path = NotesList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,9 +189,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DA22BD72B707E4100B1B72E /* TableViewSection.swift in Sources */,
+				8DA22BD12B7074CE00B1B72E /* Note.swift in Sources */,
 				8DA22BB62B7024A500B1B72E /* NotesListViewController.swift in Sources */,
 				8DA22BB22B7024A500B1B72E /* AppDelegate.swift in Sources */,
 				8DA22BC62B702ADB00B1B72E /* SimpleNoteTableViewCell.swift in Sources */,
+				8DA22BD52B70758400B1B72E /* NotesListViewModel.swift in Sources */,
 				8DA22BC82B702AEB00B1B72E /* ImageNoteTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
